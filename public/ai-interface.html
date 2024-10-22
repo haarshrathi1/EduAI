@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduAI - Medical Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">EduAI</a>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html#features">Features</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#testimonials">Testimonials</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <button class="cta-button" onclick="location.href='index.html'">
+            Back to Home <i class="fas fa-arrow-left"></i>
+        </button>
+        <div class="menu-icon" id="menuIcon">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="ai-container">
+            <!-- Stethoscope Icon and Header -->
+            <div class="ai-header">
+                <i class="fas fa-stethoscope"></i>
+                <h1>Ask Your Medical Question</h1>
+            </div>
+            <!-- Input Field -->
+            <input type="text" id="question" placeholder="Type your medical question here" aria-label="Medical Question Input" maxlength="1500">
+            <!-- Submit Button -->
+            <button onclick="askGPT()" aria-label="Submit Question">
+                Submit <i class="fas fa-paper-plane"></i>
+            </button>
+
+            <!-- Loader -->
+            <div class="loader" id="loader" aria-label="Loading"></div>
+
+            <!-- Response Section -->
+            <div id="response">
+                <h3>AI Response:</h3>
+                <div id="answer"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2024 Harsh Rathi. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
